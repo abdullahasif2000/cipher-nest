@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'SignupScreen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class LoginScreen extends StatelessWidget {
         ),
         title: const Center(
           child: Text(
-            "Malicious Link Detector",
+            "Create Account",
             style: TextStyle(
               color: Colors.red,
               fontWeight: FontWeight.bold,
@@ -35,15 +34,6 @@ class LoginScreen extends StatelessWidget {
                 'assets/images/logo-rbg.png',
                 width: 200,
                 height: 200,
-              ),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              "login to continue",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 20
               ),
             ),
             const SizedBox(height: 10),
@@ -112,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: 30),
                   ElevatedButton(
                     onPressed: () {
-                      // TODO: Handle Login
+                      // TODO: Handle Sign Up
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red,
@@ -122,7 +112,7 @@ class LoginScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
                     ),
                     child: const Text(
-                      "Login",
+                      "Sign Up",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -132,33 +122,6 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            const SizedBox(height: 20),
-            Column(
-              children: [
-                const Text(
-                  "Not a user already?",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignupScreen()),
-                    );
-                  },
-                  child: const Text(
-                    "Create Account",
-                    style: TextStyle(
-                      color: Colors.lightBlue,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-              ],
             ),
           ],
         ),
